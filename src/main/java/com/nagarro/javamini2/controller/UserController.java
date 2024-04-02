@@ -39,7 +39,7 @@ public class UserController {
         if(!validatorFactory.getValidator(ValidatorType.NUMERIC).validate(size) || Integer.parseInt(size) < 1 || Integer.parseInt(size) > 5){
             throw new CustomException("Size must be integer and can only between 1 to 5 (inclusive)", HttpStatus.BAD_REQUEST.value());
         }
-        return new ResponseEntity<>(userService.createUsers(Integer.parseInt(size)), HttpStatus.CREATED);
+        return new ResponseEntity<>(userService.createUsers(Integer.parseInt(size)), HttpStatus.OK);
     }
 
 
