@@ -1,3 +1,3 @@
 FROM openjdk:17
-COPY target/.*jar app.jar
+COPY /var/lib/jenkins/workspace/SpringBoot-CI-CD/target/.*jar app.jar
 CMD ["java", "-jar", "app.jar"]
